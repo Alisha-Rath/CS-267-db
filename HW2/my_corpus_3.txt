@@ -1,0 +1,56 @@
+
+Is It Bad for Cats to Eat Dog Food?
+
+Do good dogs ever eat bad cat food?
+
+
+This should return the top 5 documents by rank containing the phrase
+"good dog" and the terms "bad" and "cat".
+
+The output of your program should be a line with DocId Score on it, followed by
+a sequence of num_results lines with this information for the top num_results
+proximity scoring many documents. For example,
+
+
+dog good is the name of a strange king of bacteria.
+
+
+The bad cats often say good dog good bad dog good dog.
+
+
+To calculate proximity scoring, a cover for such query is a sequence of
+terms and phrases from a document that would satisfy the query such that
+no smaller sequence would also satisfy the same query.
+So for a document "bad good dog good cat dog bad" only the
+sub-sequences "bad good dog good cat" would be a cover.
+
+
+You should use the ADT consisting of your implementation of first, last,
+prev, next, nextPhrase, prevPhrase, docRight, docLeft, etc based on the
+pseudo-code you made above. You should use galloping search for the
+implementation of prev, next.
+
+
+Dog Breeds That Are Typically Good With Cats
+
+Pugs pack a lot of love into a little body. These adorable pups have a ton of
+personality and love attention. A cat can help keep them company when their
+humans are away. They may be small, but they are tough
+enough to have a feline playmate.
+
+
+This should return the top 5 documents by rank containing the phrase
+"good dog" and the terms "bad" and "cat".
+
+The output of your program should be a line with DocId Score on it, followed by
+a sequence of num_results lines with this information for the top num_results
+proximity scoring many documents. For example,
+
+
+Bad Dog is a character in the film Top Cat Begins.
+He is voiced by the good voice actor Diedrich Bader.
+
+
+Is It Bad for Cats to Eat Dog Food?
+
+Do good dogs ever eat bad cat food?

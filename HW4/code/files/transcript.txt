@@ -1,0 +1,139 @@
+Query 1: “the halifax explosion”
+
+//result from trec eval on term at a time
+
+vigy@Vigneshs-MacBook-Pro files % trec_eval trec_rel_query_1.txt trec_eval_top_BM25_termAtATime_Query_1.txt 
+runid                 	all	BM_TermAtATime
+num_q                 	all	1
+num_ret               	all	9
+num_rel               	all	10
+num_rel_ret           	all	7
+map                   	all	0.6268
+gm_map                	all	0.6268
+Rprec                 	all	0.7000
+bpref                 	all	0.6000
+recip_rank            	all	1.0000
+iprec_at_recall_0.00  	all	1.0000
+iprec_at_recall_0.10  	all	1.0000
+iprec_at_recall_0.20  	all	1.0000
+iprec_at_recall_0.30  	all	1.0000
+iprec_at_recall_0.40  	all	0.8571
+iprec_at_recall_0.50  	all	0.8571
+iprec_at_recall_0.60  	all	0.8571
+iprec_at_recall_0.70  	all	0.7778
+iprec_at_recall_0.80  	all	0.0000
+iprec_at_recall_0.90  	all	0.0000
+iprec_at_recall_1.00  	all	0.0000
+P_5                   	all	0.8000
+P_10                  	all	0.7000
+P_15                  	all	0.4667
+P_20                  	all	0.3500
+P_30                  	all	0.2333
+P_100                 	all	0.0700
+P_200                 	all	0.0350
+P_500                 	all	0.0140
+P_1000                	all	0.0070
+
+
+//result from trec eval on doc at a time
+vigy@Vigneshs-MacBook-Pro files % trec_eval trec_rel_query_1.txt trec_eval_top_BM25_docAtATime_Query_1.txt  
+runid                 	all	my-test
+num_q                 	all	1
+num_ret               	all	10
+num_rel               	all	10
+num_rel_ret           	all	10
+map                   	all	1.0000
+gm_map                	all	1.0000
+Rprec                 	all	1.0000
+bpref                 	all	1.0000
+recip_rank            	all	1.0000
+iprec_at_recall_0.00  	all	1.0000
+iprec_at_recall_0.10  	all	1.0000
+iprec_at_recall_0.20  	all	1.0000
+iprec_at_recall_0.30  	all	1.0000
+iprec_at_recall_0.40  	all	1.0000
+iprec_at_recall_0.50  	all	1.0000
+iprec_at_recall_0.60  	all	1.0000
+iprec_at_recall_0.70  	all	1.0000
+iprec_at_recall_0.80  	all	1.0000
+iprec_at_recall_0.90  	all	1.0000
+iprec_at_recall_1.00  	all	1.0000
+P_5                   	all	1.0000
+P_10                  	all	1.0000
+P_15                  	all	0.6667
+P_20                  	all	0.5000
+P_30                  	all	0.3333
+P_100                 	all	0.1000
+P_200                 	all	0.0500
+P_500                 	all	0.0200
+P_1000                	all	0.0100
+
+
+Query 2: “the huge casualties”
+
+//result from trec eval on term at a time
+vigy@Vigneshs-MacBook-Pro files % trec_eval trec_rel_query_2.txt trec_eval_top_BM25_termAtATime_Query_2.txt 
+runid                 	all	BM_TermAtATime
+num_q                 	all	1
+num_ret               	all	10
+num_rel               	all	6
+num_rel_ret           	all	6
+map                   	all	0.6347
+gm_map                	all	0.6347
+Rprec                 	all	0.6667
+bpref                 	all	0.7000
+recip_rank            	all	0.5000
+iprec_at_recall_0.00  	all	0.7500
+iprec_at_recall_0.10  	all	0.7500
+iprec_at_recall_0.20  	all	0.7500
+iprec_at_recall_0.30  	all	0.7500
+iprec_at_recall_0.40  	all	0.7500
+iprec_at_recall_0.50  	all	0.7500
+iprec_at_recall_0.60  	all	0.6667
+iprec_at_recall_0.70  	all	0.6250
+iprec_at_recall_0.80  	all	0.6250
+iprec_at_recall_0.90  	all	0.6000
+iprec_at_recall_1.00  	all	0.6000
+P_5                   	all	0.6000
+P_10                  	all	0.6000
+P_15                  	all	0.4000
+P_20                  	all	0.3000
+P_30                  	all	0.2000
+P_100                 	all	0.0600
+P_200                 	all	0.0300
+P_500                 	all	0.0120
+P_1000                	all	0.0060
+
+
+//result from trec eval on doc at a time
+vigy@Vigneshs-MacBook-Pro files % trec_eval trec_rel_query_2.txt trec_eval_top_BM25_docAtATime_Query_2.txt  
+runid                 	all	my-test
+num_q                 	all	1
+num_ret               	all	6
+num_rel               	all	6
+num_rel_ret           	all	6
+map                   	all	1.0000
+gm_map                	all	1.0000
+Rprec                 	all	1.0000
+bpref                 	all	1.0000
+recip_rank            	all	1.0000
+iprec_at_recall_0.00  	all	1.0000
+iprec_at_recall_0.10  	all	1.0000
+iprec_at_recall_0.20  	all	1.0000
+iprec_at_recall_0.30  	all	1.0000
+iprec_at_recall_0.40  	all	1.0000
+iprec_at_recall_0.50  	all	1.0000
+iprec_at_recall_0.60  	all	1.0000
+iprec_at_recall_0.70  	all	1.0000
+iprec_at_recall_0.80  	all	1.0000
+iprec_at_recall_0.90  	all	1.0000
+iprec_at_recall_1.00  	all	1.0000
+P_5                   	all	1.0000
+P_10                  	all	0.6000
+P_15                  	all	0.4000
+P_20                  	all	0.3000
+P_30                  	all	0.2000
+P_100                 	all	0.0600
+P_200                 	all	0.0300
+P_500                 	all	0.0120
+P_1000                	all	0.0060

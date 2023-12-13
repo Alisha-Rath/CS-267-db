@@ -1,0 +1,5 @@
+To calculate proximity scoring, a cover for such query is a sequence of
+terms and phrases from a document that would satisfy the query such that
+no smaller sequence would also satisfy the same query.
+So for a document "bad good dog good cat dog bad" only the
+sub-sequences "bad good dog good cat" would be a cover.

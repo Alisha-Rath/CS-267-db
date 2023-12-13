@@ -1,0 +1,26 @@
+﻿//document right same as nextDoc 
+//Takes a query from the user, if has AND OR then apply max and min else return nextphrase
+
+
+function docRight(Q, doc_id: position) {
+    if (isPhraseOrTerm(Q)) {
+        return nextPhrase(Q, doc_id: position);
+    }
+    if (isAndQuery(Q)) {
+        return maximum(docRight(Q1, doc_id: position), docRight(Q2, doc_id: position));
+    } else if (isOrQuery(Q)) {
+        return minimum(docRight(Q1, doc_id: position), docRight(Q2, doc_id: position));
+    }
+}
+
+
+function docLeft(Q, doc_id: position) {
+    if (isPhraseOrTerm(Q)) {
+        return prevPhrase(Q, doc_id: position);
+    }
+    if (isAndQuery(Q)) {
+        return minimum(docLeft(Q1, doc_id: position), docLeft(Q2, doc_id: position));
+    } else if (isOrQuery(Q)) {
+        return maximum(docLeft(Q1, doc_id: position), docLeft(Q2, doc_id: position));
+    }
+}

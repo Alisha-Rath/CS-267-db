@@ -1,0 +1,4 @@
+You should use the ADT consisting of your implementation of first, last,
+prev, next, nextPhrase, prevPhrase, docRight, docLeft, etc based on the
+pseudo-code you made above. You should use galloping search for the
+implementation of prev, next.

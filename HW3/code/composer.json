@@ -1,0 +1,19 @@
+{
+    "name": "cs267/hw3",
+    "description": "HW 3 part 2 for CS 267 using yioop",
+    "authors": [
+        {
+            "name": "Pruthviraj Urankar",
+            "email": "pruthvirajmanohar.urankar@sjsu.edu"
+        }, {
+            "name": "Aditya Prajapathi",
+            "email": "aditya.prajapathi@sjsu.edu"
+        }, {
+            "name": "Alisha Rath",
+            "email": "alisha.rath@sjsu.edu"
+        }
+    ],
+    "require": {
+        "seekquarry/yioop": "dev-master"
+    }
+}

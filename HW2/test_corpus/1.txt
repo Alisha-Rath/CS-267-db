@@ -1,0 +1,6 @@
+This should return the top 5 documents by rank containing the phrase
+"good dog" and the terms "bad" and "cat".
+
+The output of your program should be a line with DocId Score on it, followed by
+a sequence of num_results lines with this information for the top num_results
+proximity scoring many documents. For example,

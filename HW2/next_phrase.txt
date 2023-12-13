@@ -1,0 +1,161 @@
+﻿Updated nextPhrase with docid:pos instead of only position
+
+
+nextPhrase(t[1],t[2], .., t[n], docid:pos)
+{
+   v:=docid:pos
+   for i = 1 to n do
+     v:= next(t[i], v) //in form of docid:pos
+   if v == infty then // infty represents after the end of the posting list
+      return [infty, infty]
+   u := v //in form of docid:pos
+   for i := n-1 downto 1 do
+     u := prev(t[i],u)
+   if(v[1]-u[1] == n - 1) then
+     return u
+   else 
+     return nextPhrase(t[1],t[2], .., t[n], u) 
+}
+
+
+prevPhrase(t[1],t[2], .., t[n], docid:pos)
+{
+   v:=docid:pos
+   for i = n-1 downto 1 do
+     v:= prev(t[i], v) //in form of docid:pos
+   if v == infty then // infty represents after the end of the posting list
+      return [infty, infty]
+   u := v //in form of docid:pos
+   for i := 2 to n do
+     u := next(t[i],u)
+   if(u[1]-v[1] == n - 1) then
+     return v
+   else 
+     return prevPhrase(t[1],t[2], .., t[n], v) 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Next using galloping search
+
+
+  next(term, docid:pos)
+{
+        
+//P = posting list for terms in doc id, invertedindex[term][docid], gives list of indexed where term is found in docid
+
+
+//l=length of posting list for term in docid
+        l=P.length
+        c=l//last index where term is found 
+        
+if(l==0 || P[l]<=pos)then
+        return infinity
+if(P[1]>pos) then
+        c=1
+        Return docid:P[c]
+if(c>1 & P[c-1]<=pos) do
+        low=c-1
+Else
+        low=1
+jump=1
+high=low+jump
+while(high<l && P[high]<=pos) do
+        low=high
+        jump=2*jump
+        High = low+jump
+        
+If high>l then
+        high=l
+c=binarysearchNext(P, low, high, pos )
+Return docid:P[c]
+}
+
+
+binarySearchNext(P, lo, hi, pos){
+        ans=infinity
+                while(lo<=hi){
+                        mid=(lo+hi)/2
+                        if(mid>current){
+                                ans=mid
+                                hi=mid-1
+                        }
+                        else{
+                                lo=mid+1
+                        }
+                }
+                return ans
+
+
+}
+
+
+
+
+
+
+
+
+
+
+Prev using galloping search
+
+
+prev(term, docid:pos)
+{
+        
+//P = posting list for terms in doc id, invertedindex[term][docid], gives list of indexed where term is found in docid
+
+
+//l=length of posting list for term in docid
+        l=P.length
+        c=l//last index where term is found 
+        
+if(l==0 || P[1]>=pos)then
+        return infinity
+if(P[l]<pos) then
+        c=l
+        Return docid:P[c]
+if(c>1 & P[c-1]>=pos) do
+        high=c-1
+Else
+        high=l
+jump=1
+low=high-jump
+while(low>1 && P[low]>=pos) do
+        high=low
+        jump=2*jump
+        low = high-jump
+        
+If high<1 then
+        high=1
+c=binarysearchPrev(P, low, high, pos )
+Return docid:P[c]
+}
+
+
+binarySearchPrev(P, lo, hi, pos){
+        ans=-infinity
+                while(lo<=hi){
+                        mid=(lo+hi)/2
+                        if(mid<current){
+                                ans=mid
+                                lo=mid+1
+                        }
+                        else{
+                                hi=mid-1
+                        }
+                }
+                return ans
+}
